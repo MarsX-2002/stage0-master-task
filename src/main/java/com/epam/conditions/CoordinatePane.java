@@ -2,17 +2,19 @@ package com.epam.conditions;
 
 public class CoordinatePane {
 
-    public String printQuadrant(int x, int y) {
+    public void printQuadrant(int x, int y) {
         if (x > 0 && y>0){
-            return "first";
+            System.out.println("first");
         } else if (x < 0 && y>0){
-            return "second";
+            System.out.println("second");
         } else if (x < 0 && y<0){
-            return "third";
+            System.out.println("third");
         } else if (x > 0 && y<0){
-            return "fourth";
+            System.out.println("fourth");
+        } else {
+            System.out.println("zero");
         }
-        return "zero";
+
     }
 
 }
