@@ -96,16 +96,13 @@ public class ArrayTasks {
                 posNum++;
             }
         }
+
         int[] positiveArr = new int[posNum];
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > 0) {
                 positiveArr[posNum - 1] = arr[i];
                 posNum--;
             }
-        }
-
-        for (int i = 0; i < positiveArr.length; i++) {
-            positiveArr[i] = positiveArr[posNum - i - 1];
         }
 
         return positiveArr;
