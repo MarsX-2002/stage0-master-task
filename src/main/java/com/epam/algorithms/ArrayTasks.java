@@ -103,9 +103,6 @@ public class ArrayTasks {
                 posNum--;
             }
         }
-        for (int i = 0; i < positiveArr.length; i++) {
-            positiveArr[i] = positiveArr[posNum - i];
-        }
 
         return positiveArr;
     }

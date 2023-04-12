@@ -1,5 +1,7 @@
 package com.epam.conditions;
 
+import javax.sound.midi.Soundbank;
+
 public class BitwiseValuesSwap {
     public void swap(int first, int second) {
         first = first ^ second;
@@ -7,5 +9,6 @@ public class BitwiseValuesSwap {
         first = first ^ second;
 
         System.out.println(second);
+        System.out.println(first);
     }
 }
