@@ -59,7 +59,7 @@ public class ArrayTasks {
     public int findIndexOfNumber(int[] arr, int number) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == number) {
-                return i + 1;
+                return i;
             }
         }
         return -1;
@@ -75,8 +75,8 @@ public class ArrayTasks {
      */
     public String[] reverseArray(String[] arr) {
         String[] strArr = new String[arr.length];
-        for (int i = arr.length; i > 0; i--) {
-            strArr[arr.length - i] = arr[i];
+        for (int i = 0; i < arr.length; i++) {
+            strArr[i] = arr[arr.length-i-1];
         }
         return strArr;
     }
@@ -102,7 +102,9 @@ public class ArrayTasks {
                 positiveArr[posNum - 1] = arr[i];
                 posNum--;
             }
-
+        }
+        for (int i = 0; i < positiveArr.length; i++) {
+            positiveArr[i] = positiveArr[posNum - i];
         }
 
         return positiveArr;

@@ -5,7 +5,7 @@ public class Animal {
     private int numberOfPaws;
     private boolean hasFur;
 
-    Animal(String color, int numberOfPaws, boolean hasFur) {
+    public Animal(String color, int numberOfPaws, boolean hasFur) {
         this.color = color;
         this.numberOfPaws = numberOfPaws;
         this.hasFur = hasFur;
@@ -14,27 +14,19 @@ public class Animal {
     public String getColor() {
         return color;
     }
+
     public int getNumberOfPaws() {
         return numberOfPaws;
     }
+
     public boolean getHasFur() {
         return hasFur;
     }
 
-
     public String getDescription() {
-        String description = "This animal is mostly " + color + ". It has " + numberOfPaws + " ";
-        if (numberOfPaws == 1) {
-            description += "paw";
-        } else {
-            description += "paws";
-        }
-        description += " and ";
-        if (hasFur) {
-            description += "a fur.";
-        } else {
-            description += "no fur.";
-        }
-        return description;
+        String temp = hasFur ? "a" : "no";
+        String paws = numberOfPaws > 1 ? "paws" : "paw";
+        return "This animal is mostly " + color + ". It has " + numberOfPaws + " " + paws + " and " + temp + " fur.";
     }
 }
+
